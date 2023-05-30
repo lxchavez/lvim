@@ -9,11 +9,13 @@ reload("alex.options")
 
 lvim.plugins = {
     {
-        "olivercederborg/poimandres.nvim",
+        "rose-pine/neovim",
+        name = "rose-pine",
         config = function()
-            require('poimandres').setup {
-                --disable_background = true,
-                --disable_float_background = true,
+            require('rose-pine').setup {
+                variant = "auto",
+                -- disable_background = true,
+                -- disable_float_background = true,
                 disable_italics = true,
             }
         end
@@ -27,8 +29,7 @@ lvim.plugins = {
 }
 
 -- change colorscheme
-lvim.colorscheme = "poimandres"
-
+lvim.colorscheme = "rose-pine"
 
 -- language support
 lvim.builtin.treesitter.ensure_installed = {
