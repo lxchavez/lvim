@@ -7,9 +7,8 @@
 ## Installation
 
 - Install LunarVim as per the instructions: https://www.lunarvim.org/docs/installation
-- Checkout this repo under ~/.lvim`
-- Alias lvim config directory to checked out repo
-
+- Checkout this repo under `~/.lvim`
+- Alias lvim config directory to checked out repo:
 ```sh
 cd ~/.config
 rm -rf lvim
