@@ -26,12 +26,12 @@ vim.opt.incsearch = true
 -- good colors
 vim.opt.termguicolors = true
 
---vim.opt.scrolloff = 10
+vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 -- fast update times
---vim.opt.updatetime = 50
+vim.opt.updatetime = 50
 
 -- yes to color columns
---vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"

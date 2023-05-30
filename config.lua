@@ -4,6 +4,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 reload("alex.options")
+reload("alex.remap")
 
 -- User plugins
 
@@ -26,6 +27,8 @@ lvim.plugins = {
     -- git
     "tpope/vim-fugitive",
     "airblade/vim-gitgutter",
+    -- undo
+    "mbbill/undotree",
 }
 
 -- change colorscheme
@@ -41,7 +44,13 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup { { name = "black" }, }
 
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", args = { "--ignore=E203" }, filetypes = { "python" } } }
+linters.setup {
+    {
+        command = "flake8",
+        args = { "--ignore=E203,E501 --max-line-length=120" },
+        filetypes = { "python" },
+    }
+}
 
 -- restart language server after switching into a new venv
 require('swenv').setup({
