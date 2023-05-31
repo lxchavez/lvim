@@ -35,3 +35,6 @@ vim.opt.updatetime = 50
 
 -- yes to color columns
 vim.opt.colorcolumn = "120"
+
+-- clipboard management
+vim.opt.clipboard = "unnamedplus"
